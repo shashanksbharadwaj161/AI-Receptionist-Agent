@@ -43,9 +43,19 @@ uvicorn app.main:app --reload
 curl -X POST http://localhost:8000/demo/mock-call \
   -H "Content-Type: application/json" \
   -d '{
-    "facility_id": "00000000-0000-0000-0000-000000000000",
-    "date": "2024-12-31",
-    "customer_name": "Test Caller",
-    "customer_phone": "+911234567890"
-  }'
+        "facility_id": "00000000-0000-0000-0000-000000000000",
+        "date": "2024-12-31",
+        "customer_name": "Test Caller",
+        "customer_phone": "+911234567890"
+      }'
 ```
+
+## Resolving merge conflicts
+
+When Git shows merge conflict markers, you may see editor prompts such as **Accept current change**, **Accept incoming change**, and **Accept both changes**:
+
+- **Accept current change** keeps your branch’s version (the lines above `=======`).
+- **Accept incoming change** uses the other branch’s version (the lines below `=======`).
+- **Accept both changes** keeps both sets of edits (removing the conflict markers) so you can reconcile them manually.
+
+After choosing, make sure the file reads correctly, remove any leftover `<<<<<<<`, `=======`, or `>>>>>>>` markers, and run `git add <file>` followed by `git commit` to finalize the resolution.
